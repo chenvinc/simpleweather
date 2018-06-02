@@ -2,8 +2,8 @@
     <dbname value="simple_weather"/>
     <version value="1"/>
     <list>
-        <mapping class="com.simple.android.db.Province"/>
-        <mapping class="com.simple.android.db.City"/>
-        <mapping class="com.simple.android.db.County"/>
+        <mapping class="com.example.chenm.simpleweather.db.Province"/>
+        <mapping class="com.example.chenm.simpleweather.db.City"/>
+        <mapping class="com.example.chenm.simpleweather.db.County"/>
     </list>
 </litepal>
