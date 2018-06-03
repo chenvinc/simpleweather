@@ -1,5 +1,6 @@
 package com.example.chenm.simpleweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.chenm.simpleweather.gson.Forecast;
 import com.example.chenm.simpleweather.gson.Weather;
+import com.example.chenm.simpleweather.service.AutoUpdateService;
 import com.example.chenm.simpleweather.util.HttpUtil;
 import com.example.chenm.simpleweather.util.Utility;
 
@@ -192,6 +194,9 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
     /**
